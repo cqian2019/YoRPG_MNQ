@@ -2,7 +2,7 @@
 
 ## :star2: Classes :star2::
 
-### ===[ Character ]===
+### ===[ :bust_in_silhouette: Character :bust_in_silhouette: ]===
 ##### *Attributes*:
 - **health** variable
 - **strength** variable
@@ -13,7 +13,7 @@
 - **lowerHP** method
 - **attack** method
 
-### ===[ Protagonist ]===
+### ===[ :boy: Protagonist :boy: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Character*** :fire:
 - **name** variable
@@ -22,36 +22,36 @@
 - **specialize** method
 - **normalize** method
 
-### ===[ Monster ] ===
+### ===[ :japanese_goblin: Monster :japanese_goblin: ] ===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Character*** :fire:
 - **Monster** specific variable values in constructor
 
-### ===[ Knight ]===
+### ===[ :punch: Knight :punch: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Protagonist*** :fire:
 - **Knight**-specific **about** method
 - **setStr** method for increasing strength.
 
-### ===[ Archer ]===
+### ===[ :crescent_moon: Archer :crescent_moon: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Protagonist*** :fire:
 - **Archer**-specific **about** method
 - **setAtt** method for increasing strength and attack rating.
 
-### ===[ Mage ]===
+### ===[ :zap: Mage :zap: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Protagonist*** :fire:
 - **Mage**-specific **about** method
 - **setDef** method for increasing defense.
 
-### ===[ Giant ]===
+### ===[ :rage3: Giant :rage3: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Monster*** :fire:
 - **Giant**-specific **about** method
 - **setAtt** method for increasing health, strength and attack rating.
 
-### ===[ Dragon ]===
+### ===[ :dragon: Dragon :dragon: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Monster*** :fire:
 - **Dragon**-specific **about** method
