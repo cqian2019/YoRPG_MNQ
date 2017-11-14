@@ -1,6 +1,6 @@
 # Team **MNQ**'s YoRPG:
 
-## Classes:
+## :star2: Classes :star2::
 
 ### ===[ Character ]===
 ##### *Attributes*:
