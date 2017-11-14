@@ -1,6 +1,6 @@
 # Team **MNQ**'s YoRPG:
 
-## Classes:
+## :star2: Classes :star2::
 
 ### ===[ Character ]===
 ##### *Attributes*:
@@ -57,7 +57,7 @@
 - **Dragon**-specific **about** method
 - **setAtt** method for increasing strength and defense.
 
-### ===[ Dog ]===
+### ===[ :dog: Dog :dog: ]===
 ##### *Attributes*:
 - :fire: *Inherits all attributes from **Monster*** :fire:
 - **Dog**-specific **about** method
