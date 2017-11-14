@@ -1,6 +1,6 @@
 public class Dog extends Monster{
 
-    public static String about() {
+    public String about() {
 	return "It's just a dog. Should you challenge him?";
 	    }
     public void setAtt() {;

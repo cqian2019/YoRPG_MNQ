@@ -30,6 +30,7 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int type;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -60,7 +61,6 @@ public class YoRPG
   {
     String s;
     String name = "";
-    String f;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -71,7 +71,7 @@ public class YoRPG
     System.out.print( s );
 
     try {
-	    difficulty = Integer.parseInt( in.readLine() );
+      difficulty = Integer.parseInt( in.readLine() );
     }
     catch ( IOException e ) { }
 
@@ -79,13 +79,34 @@ public class YoRPG
     System.out.print( s );
 
     try {
-	    name = in.readLine();
+      name = in.readLine();
     }
     catch ( IOException e ) { }
-    
 
-    //instantiate the player's character
-    pat = new Protagonist( name );
+    s = "";
+
+    s += "\nChoose your hero type: \n";
+    s += "\t1: Knight\n";
+    s += "\t2: Mage\n";
+    s += "\t3: Archer\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+      type = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
+    if (type == 1){
+      pat = new Knight(name);
+      ((Knight)pat).setAtt();
+    } else if (type == 2) {
+      pat = new Mage(name);
+      ((Mage)pat).setAtt();
+    } else if (type == 3) {
+      pat = new Archer(name);
+      ((Archer)pat).setAtt();
+    }
 
   }//end newGame()
 
@@ -102,13 +123,22 @@ public class YoRPG
     int d1, d2;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
-	    System.out.println( "\nNothing to see here. Move along!" );
+      System.out.println( "\nNothing to see here. Move along!" );
     else {
-	    System.out.println( "\nLo, yonder monster approacheth!" );
+      System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+      if (difficulty == 3){
+        smaug = new Dragon();
+        ((Dragon)smaug).setAtt();
+      }else if (difficulty == 2){
+        smaug = new Giant();
+        ((Giant)smaug).setAtt();
+      }else{
+        smaug = new Dog();
+        ((Dog)smaug).setAtt();
+      }
 
-	    while( smaug.isAlive() && pat.isAlive() ) {
+      while( smaug.isAlive() && pat.isAlive() ) {
 
         // Give user the option of using a special attack:
         // If you land a hit, you incur greater damage,
@@ -133,26 +163,26 @@ public class YoRPG
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
-	    }//end while
+      }//end while
 
-	    //option 1: you & the monster perish
-	    if ( !smaug.isAlive() && !pat.isAlive() ) {
+      //option 1: you & the monster perish
+      if ( !smaug.isAlive() && !pat.isAlive() ) {
         System.out.println( "'Twas an epic battle, to be sure... " + 
                             "You cut ye olde monster down, but " +
                             "with its dying breath ye olde monster. " +
                             "laid a fatal blow upon thy skull." );
         return false;
-	    }
-	    //option 2: you slay the beast
-	    else if ( !smaug.isAlive() ) {
+      }
+      //option 2: you slay the beast
+      else if ( !smaug.isAlive() ) {
         System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
         return true;
-	    }
-	    //option 3: the beast slays you
-	    else if ( !pat.isAlive() ) {
+      }
+      //option 3: the beast slays you
+      else if ( !pat.isAlive() ) {
         System.out.println( "Ye olde self hath expired. You got dead." );
         return false;
-	    }
+      }
     }//end else
 
     return true;
@@ -171,11 +201,11 @@ public class YoRPG
     int encounters = 0;
 
     while( encounters < MAX_ENCOUNTERS ) {
-		if ( !game.playTurn() )
-			break;
-		encounters++;
-		System.out.println();
-		}
+    if ( !game.playTurn() )
+      break;
+    encounters++;
+    System.out.println();
+    }
 
     System.out.println( "Thy game doth be over." );
   }//end main

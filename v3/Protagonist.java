@@ -9,7 +9,7 @@
 public class Protagonist extends Character{
 	
 		//Attributes:
-		private String name;
+		protected String name;
 		
 		//Default Constructor:
 		public Protagonist() {
