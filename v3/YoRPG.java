@@ -60,6 +60,7 @@ public class YoRPG
   {
     String s;
     String name = "";
+    String f;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -81,6 +82,7 @@ public class YoRPG
 	    name = in.readLine();
     }
     catch ( IOException e ) { }
+    
 
     //instantiate the player's character
     pat = new Protagonist( name );
