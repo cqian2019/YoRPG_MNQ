@@ -1,7 +1,64 @@
-# YoRPG_MNQ
-Hi tim! click on the pencil to edit this file. **this** is how you bold and *this* is how you italicize. 
-You can also make headers.
-# This is an h1 tag
-## This is an h2 tag
-###### This is an h6 tag
-here's a link to some more ways to spice it up: https://guides.github.com/features/mastering-markdown/
+# Team **MNQ**'s YoRPG:
+
+## Classes:
+
+### ===[ Character ]===
+##### *Attributes*:
+- **health** variable
+- **strength** variable
+- **defense** variable
+- **attRating** variable
+- **isAlive** method
+- **getDefense** method
+- **lowerHP** method
+- **attack** method
+
+### ===[ Protagonist ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Character*** :fire:
+- **name** variable
+- **Protagonist** specific variable values in constructor.
+- **getName** method
+- **specialize** method
+- **normalize** method
+
+### ===[ Monster ] ===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Character*** :fire:
+- **Monster** specific variable values in constructor
+
+### ===[ Knight ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Protagonist*** :fire:
+- **Knight**-specific **about** method
+- **setStr** method for increasing strength.
+
+### ===[ Archer ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Protagonist*** :fire:
+- **Archer**-specific **about** method
+- **setAtt** method for increasing strength and attack rating.
+
+### ===[ Mage ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Protagonist*** :fire:
+- **Mage**-specific **about** method
+- **setDef** method for increasing defense.
+
+### ===[ Giant ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Monster*** :fire:
+- **Giant**-specific **about** method
+- **setAtt** method for increasing health, strength and attack rating.
+
+### ===[ Dragon ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Monster*** :fire:
+- **Dragon**-specific **about** method
+- **setAtt** method for increasing strength and defense.
+
+### ===[ Dog ]===
+##### *Attributes*:
+- :fire: *Inherits all attributes from **Monster*** :fire:
+- **Dog**-specific **about** method
+- **setAtt** method for increasing defense and attack rating.
