@@ -1,4 +1,11 @@
 # Team **MNQ**'s YoRPG:
+***Roster***:
+
+*Tim Marder*
+
+*Bill Ni*
+
+*Cheryl Qian*
 
 ## :star2: Classes :star2::
 
