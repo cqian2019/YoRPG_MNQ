@@ -38,4 +38,16 @@ public abstract class Protagonist extends Character{
 		
     //Method for returning to protagonist's regular mode
     public abstract void normalize();
+
+    public static void defPot() {
+	defense += 20;
+    }
+
+    public static void attPot() {
+	attRating += 0.5;
+    }
+
+    public static void hpPot() {
+	health += 50;
+    }
 }
