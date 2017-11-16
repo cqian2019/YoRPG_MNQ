@@ -204,7 +204,7 @@ public class YoRPG {
 		pat.coin += 10;
 		System.out.print( "HuzzaaH! Ye olde monster hath been slain!\n" +
 				  " You see something glint. The monster dropped 10 coins." +
-				  "\nYou have a total of " + pat.coin + " coins.");
+				  "\nYou have a total of " + pat.coin + " coins. ");
 		visitStore();
 		return true;
 	    }

@@ -50,12 +50,19 @@ public class Store {
 	    s = in.readLine(); }
 	catch ( IOException e ) {};
 
-	if ( s == "y" ) {
+
+
+        if (s.equals("y") && p.coin < 5 ) {	System.out.println("You don't have enough coins. See you next time!\nExiting store...");}
+	
+	else if (s.equals("y")) {
 	    Store.run();
 	}
-
-	System.out.println("You don't have enough coins. See you next time!\nExiting store...");
+	
+	else if ( s.equals("n")) {
+	    System.out.println("See you next time!");
 	}
+	}
+
     }
 }
 
