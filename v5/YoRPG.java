@@ -87,8 +87,11 @@ public class YoRPG
 
     s += "\nChoose your hero type: \n";
     s += "\t1: Knight\n";
+    s += Knight.about() + "\n";
     s += "\t2: Mage\n";
+    s += Mage.about() + "\n";
     s += "\t3: Archer\n";
+    s += Archer.about() + "\n";
     s += "Selection: ";
     System.out.print( s );
 
@@ -130,12 +133,15 @@ public class YoRPG
       if (difficulty == 3){
         smaug = new Dragon();
         ((Dragon)smaug).setAtt();
+	System.out.println(Dragon.about());
       }else if (difficulty == 2){
         smaug = new Giant();
         ((Giant)smaug).setAtt();
+	System.out.println(Giant.about());
       }else{
         smaug = new Dog();
         ((Dog)smaug).setAtt();
+	System.out.println(Dog.about());
       }
 
       while( smaug.isAlive() && pat.isAlive() ) {
@@ -170,17 +176,24 @@ public class YoRPG
         System.out.println( "'Twas an epic battle, to be sure... " + 
                             "You cut ye olde monster down, but " +
                             "with its dying breath ye olde monster. " +
-                            "laid a fatal blow upon thy skull." );
+                            "laid a fatal blow upon thy skull.\n" +
+			    "You see something glint. The monster dropped 5 coins." +
+			    "\nYou have a total of " + pat.coin + " coins.");
         return false;
       }
       //option 2: you slay the beast
       else if ( !smaug.isAlive() ) {
-        System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+	  pat.coin += 10;
+	  System.out.print( "HuzzaaH! Ye olde monster hath been slain!\n" +
+			    "You see something glint. The monster dropped 10 coins." +
+			    "\nYou have a total of " + pat.coin + " coins.");
         return true;
       }
       //option 3: the beast slays you
       else if ( !pat.isAlive() ) {
-        System.out.println( "Ye olde self hath expired. You got dead." );
+	  System.out.print("Ye olde self hath expired. You got dead.\n" +
+			   "You're dead, but you still have " + pat.coin
+			   + " coins.");
         return false;
       }
     }//end else

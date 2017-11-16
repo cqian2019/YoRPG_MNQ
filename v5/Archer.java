@@ -4,7 +4,7 @@ public class Archer extends Protagonist{
 		name = str;
 	}
     public static String about() {
-	return "The coolly level-headed Archer knows how to keep his calm on a battlefield. He deals his attacks strategically, and saves his arrows for when he can deal a near-fatal blow. His attacks are accurate, but are useless on the rare occasion he misses. He's also not a close combat fighter, so he's more vulnerable to unexpected attacks.";
+	return "The coolly level-headed Archer knows how to keep his calm on a battlefield. \nHe deals his attacks strategically, and saves his arrows for when he can \ndeal a near-fatal blow. His attacks are accurate, but are useless on the \nrare occasion he misses. He's also not a close combat fighter, so he's more\n vulnerable to unexpected attacks.\n";
 	    }
     public void normalize() {
 	defense = 40;

@@ -7,7 +7,8 @@
 **********************************************/
 
 public abstract class Protagonist extends Character{
-	
+    int coin; //coins for buying stuff
+
     //Attributes:
     protected String name;
 		
@@ -39,15 +40,15 @@ public abstract class Protagonist extends Character{
     //Method for returning to protagonist's regular mode
     public abstract void normalize();
 
-    public static void defPot() {
+    public void defPot() {
 	defense += 20;
     }
 
-    public static void attPot() {
+    public void attPot() {
 	attRating += 0.5;
     }
 
-    public static void hpPot() {
+    public void hpPot() {
 	health += 50;
     }
 }
