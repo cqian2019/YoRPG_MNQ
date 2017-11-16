@@ -8,6 +8,7 @@
 
 public abstract class Protagonist extends Character{
     int coin; //coins for buying stuff
+    int defPotNum, attPotNum, hpPotNum;
 
     //Attributes:
     protected String name;
@@ -41,14 +42,19 @@ public abstract class Protagonist extends Character{
     public abstract void normalize();
 
     public void defPot() {
+	int num = 0;
 	defense += 20;
     }
 
     public void attPot() {
+	int num = 0;
 	attRating += 0.5;
     }
 
     public void hpPot() {
+	int num = 0;
 	health += 50;
     }
+
+
 }
